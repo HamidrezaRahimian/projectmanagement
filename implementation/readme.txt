@@ -1,8 +1,6 @@
 instruction to run the website : 
 
 
-
-
 Anleitung 
 5.1 Einrichtung der Datenbank
 
