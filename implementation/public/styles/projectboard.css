@@ -138,9 +138,7 @@ nav ul li a:hover {
 
 /* Button Styles */
 .edit-project-btn,
-.project-details-btn,
-#new-project-form button,
-#edit-project-form button {
+.project-details-btn {
     padding: 12px 20px;
     background-color: #2b3a67;
     color: white;
@@ -159,10 +157,24 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#new-project-form button:hover,
-#edit-project-form button:hover {
-    background-color: #415e9c;
+#new-project-form button {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: #2b3a67;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Hinzufügen von Transform */
 }
+
+#new-project-form button:hover {
+    background-color: #415e9c;
+
+}
+
 
 /* Table Style */
 #project-table,
