@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Stellt sicher, dass der Footer am Ende bleibt */
+    align-items: center;
+    /* Zentriert den Inhalt horizontal */
+    min-height: 100vh;
+    /* Volle Höhe des Viewports */
+}
+
+header {
+    background-color: #2b3a67;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #2b3a67;
+    /* Dunkles Blau */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+/* Back Button in Header */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #2b3a67;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #415e9c;
+}
+
+/* Button zum kreiren neuer Aufgaben */
+.add-task-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.add-task-button button {
+    padding: 15px 30px;
+    color: white;
+    background-color: #2b3a67;
+    /* Dunkles Blau */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-button button:hover {
+    background-color: #415e9c;
+    /* Helleres Blau */
+}
+
+
+/* Container für Aufgaben-Spalten */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Stellt sicher, dass Spalten auf kleineren Bildschirmen gestapelt werden */
+    flex-grow: 1;
+    /* Lässt den Container wachsen und den verbleibenden Platz einnehmen */
+}
+
+/* Stile für einzelne Spalten */
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    transition: box-shadow 0.3s ease;
+}
+
+.column:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.column h2 {
+    text-align: center;
+    background-color: #2b3a67;
+    /* Dunkles Blau */
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Task List innerhalb der Spalten */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin: 8px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styles */
+.add-task-form {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.add-task-form h2 {
+    margin-bottom: 20px;
+    color: #2b3a67;
+    /* Dunkles Blau */
+    text-align: center;
+}
+
+/* Stile für form-group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-group button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group button {
+    background-color: #2b3a67;
+    /* Dunkleres Bau */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #415e9c;
+    /* Helleres Blau */
+}
+
+.form-group input[type="date"] {
+    margin-bottom: 5px;
+    /* Adds 10px margin to the right of the date input */
+}

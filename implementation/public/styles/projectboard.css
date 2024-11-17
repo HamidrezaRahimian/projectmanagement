@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header */
+header {
+    background-color: #2b3a67;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #02003bdd;
+    padding: 10px 20px;
+    position: relative;
+    /* For positioning the logout button */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #415e9c;
+    color: #fff;
+}
+
+/* Logout Button */
+#logout-button {
+    background-color: #2b3a67;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+#logout-button:hover {
+    background-color: #415e9c;
+}
+
+/* Container for the Form and Table */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* New Project Form */
+#new-project-container h2,
+#edit-input-project-container h2 {
+    margin-bottom: 20px;
+    color: #2b3a67;
+    font-size: 1.8rem;
+}
+
+#new-project-form,
+#edit-project-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#new-project-form label,
+#edit-project-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+#new-project-form input,
+#new-project-form textarea,
+#edit-project-form input,
+#edit-project-form textarea {
+    width: 94%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+#new-project-form input:focus,
+#new-project-form textarea:focus,
+#edit-project-form input:focus,
+#edit-project-form textarea:focus {
+    border-color: #2b3a67;
+}
+
+/* Button Styles */
+.edit-project-btn,
+.project-details-btn,
+#new-project-form button,
+#edit-project-form button {
+    padding: 12px 20px;
+    background-color: #2b3a67;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.edit-project-btn:hover,
+.project-details-btn:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#new-project-form button:hover,
+#edit-project-form button:hover {
+    background-color: #415e9c;
+}
+
+/* Table Style */
+#project-table,
+#user-table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#project-table th,
+#project-table td,
+#user-table th,
+#user-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+#project-table th,
+#user-table th {
+    background-color: #2b3a67;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#project-table td,
+#user-table td {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Button Links */
+#project-table a.btn-details,
+#user-table a.btn-details {
+    background-color: #2b3a67;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+#project-table a.btn-details:hover,
+#user-table a.btn-details:hover {
+    background-color: #415e9c;
+}
+
+/* Footer */
+#footer {
+    background-color: #2b3a67;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 0.85rem;
+    margin-top: auto;
+    /* Pushes footer to the bottom */
+}
+
+/* Hover and Focus Effect */
+input:hover,
+textarea:hover {
+    border-color: #aaa;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(43, 58, 103, 0.4);
+}

@@ -1,0 +1,56 @@
+<!--
+Diese HTML-Datei dient als Registrierungsseite für Benutzer des Task Management Boards. 
+Sie enthält ein Formular zur Eingabe des Benutzernamens und des Passworts, das eine Registrierung ermöglicht. 
+Zusätzlich gibt es einen Link für bereits registrierte Benutzer, um sich anzumelden. 
+Nach dem Absenden des Formulars wird das Ergebnis im vorgesehenen Bereich angezeigt.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="styles/favicon.ico">
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+
+<body>
+    <header>
+        <h1>User Registration</h1>
+    </header>
+
+    <!-- Registrierung -->
+    <form id="registerForm">
+        <h2>Registration</h2>
+        <div class="form-group">
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="registerEmai">Email:</label>
+            <input type="email" id="registerEmail" name="email" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+        <div class="already-registered">
+            <a href="index.html">Do you already have an account?</a>
+        </div>
+    </form>
+
+    <footer>
+        <p>Task Management Board - 2024</p>
+    </footer>
+
+    <div id="result"></div>
+    <script src="scripts/registrationScript.js"> </script>
+</body>
+
+</html>

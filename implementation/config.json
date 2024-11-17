@@ -1,0 +1,21 @@
+{
+    "db": {
+      "host": "localhost",
+      "user": "root",
+      "password": "",
+      "database": "name_db"
+    },
+    "sessionSecret": "geheimnisvollerSchlüssel",
+    "sessionMaxAge": 600000,
+    "port": 3001,
+    "email": {
+    "user": "__________________",
+    "pass": "***********",
+    "subject": {
+      "deadlineNear": "Aufgabe steht kurz vor Ablauf",
+      "deadlineMissed": "Deadline überschritten"
+    },
+    "intervalInMinutes": 1
+    }
+  }
+  

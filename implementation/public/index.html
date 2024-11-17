@@ -1,0 +1,56 @@
+<!--
+Diese HTML-Datei dient als Anmeldeseite für Benutzer des Task Management Boards. 
+Sie enthält ein Formular zur Eingabe des Benutzernamens und des Passworts, das die Anmeldung ermöglicht. 
+Ein Link führt zu einer Registrierungsseite für Benutzer, die noch kein Konto haben. 
+Zusätzlich gibt es einen Bereich zur Anzeige von Ergebnissen und einen Footer mit Copyright-Informationen.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="styles/favicon.ico">
+    <link rel="stylesheet" href="styles/index.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>User Login</h1>
+    </header>
+
+
+    <!-- Anmeldung -->
+    <form id="loginForm">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Login</button>
+        </div>
+        <div class="new-registeration">
+            <a href="register.html">No account yet?</a>
+        </div>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <footer>
+        <p>Task Management Board - 2024</p>
+    </footer>
+
+    <script src="scripts/loginScript.js"></script>
+
+</body>
+
+</html>

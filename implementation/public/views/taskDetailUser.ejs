@@ -1,0 +1,68 @@
+<!--
+Diese Datei zeigt die Details einer bestimmten Aufgabe im Task Management Board an. 
+Sie enthält ein Formular zur Anzeige und Aktualisierung von Aufgabendetails wie dem Namen, der Priorität und der Beschreibung. 
+Zusätzlich gibt es ein Kommentarfeld, in das Benutzer Kommentare eingeben können. 
+Ein Bereich für Kommentare wird ebenfalls bereitgestellt, um dynamisch hinzugefügte Kommentare anzuzeigen. 
+Ein Footer zeigt die Copyright-Informationen an, und ein externes JavaScript-Skript verwaltet die Funktionalität der Seite.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="icon" href="styles/favicon.ico">
+    <link href="../styles/details.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Task Details</h1>
+        <button onclick="history.back()" class="back-button">Return</button>
+    </header>
+
+    <div class="container-tasks">
+        <h1>Task: <%= task.taskname %>
+        </h1>
+
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskname">Task Name:</label>
+                <input type="text" id="taskname" name="taskname" value="<%= task.taskname %>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="prio">Priority (0-9):</label>
+                <input type="number" id="prio" name="prio" min="0" max="9" value="<%= task.prio %>">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"><%= task.description %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Leave a comment..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="updateTask()">Update Task</button>
+            </div>
+        </form>
+        <div class="comments-area">
+            <div class="comments-section" id="commentsSection">
+                <h2>Comments</h2>
+                <!-- Kommentare werden hier dynamisch eingefügt -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Task Management Board - 2024</p>
+    </footer>
+
+    <script src="../scripts/taskDetailScript.js"></script>
+
+</body>
+
+</html>

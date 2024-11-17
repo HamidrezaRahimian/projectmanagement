@@ -1,0 +1,110 @@
+<!--
+Diese Datei zeigt die Details einer bestimmten Aufgabe im Task Management Board an. 
+Sie enthält ein Formular zur Anzeige und Aktualisierung von Aufgabendetails wie dem Namen, der Priorität, dem Besitzer, der Zuweisung, der Beschreibung und einer Frist. 
+Zusätzlich gibt es ein Kommentarfeld, in das Benutzer Kommentare eingeben können, sowie einen Bereich für Kommentare, die dynamisch angezeigt werden können. 
+Ein Footer zeigt die Copyright-Informationen an, und ein externes JavaScript-Skript verwaltet die Funktionalität der Seite.
+-->
+
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="styles/favicon.ico">
+    <link href="../styles/details.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Task Management Dashboard</h1>
+        <button onclick="history.back()" class="back-button">Return</button>
+    </header>
+
+    <div class="add-task-form">
+        <h2>Task Details</h2>
+        <h4>Felder die Freigelassen werden behalten ihren alten Wert.</h4>
+
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskname">Task Name:</label>
+                <input type="text" id="taskname" name="taskname" value="<%= task.taskname %>" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="prio">Priority (0-9):</label>
+                <input type="number" id="prio" name="prio" min="0" max="9" value="<%= task.prio %>">
+            </div>
+
+            <div class="form-group">
+                <label for="prio">Staus:</label>
+                <select id="status" name="status">
+                    <option value="1" <% if (task.status===1) { %> selected <% } %>>1 - Neu</option>
+                    <option value="2" <% if (task.status===2) { %> selected <% } %>>2 - In Bearbeitung</option>
+                    <option value="3" <% if (task.status===3) { %> selected <% } %>>3 - Fast Fertig</option>
+                    <option value="4" <% if (task.status===4) { %> selected <% } %>>4 - Abgeschlossen</option>
+                    <option value="5" <% if (task.status===5) { %> selected <% } %>>5 - Archiviert</option>
+                </select>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="owner">Owner:</label>
+                <select id="owner" name="owner" value="<%= task.owner %>">
+                    <option value="">Select Owner</option>
+                    <!-- Options for Owner can be dynamically added here -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="assigned">Assigned:</label>
+                <select id="assigned" name="assigned" value="<%= task.assigned %>">
+                    <option value="">Select Assigned</option>
+                    <!-- Options for Assigned can be dynamically added here -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"><%= task.description %></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline" value="<%= task.deadline %>">
+                <input type="time" id="time" name="time" value="<%= task.time %>">
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Leave a comment..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="updateTask()">Update Task</button>
+            </div>
+
+        </form>
+        <div class="comments-area">
+            <div class="comments-section" id="commentsSection">
+                <h2>Comments</h2>
+                <!-- Kommentare werden hier dynamisch eingefügt -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Task Management Dashboard - 2024</p>
+    </footer>
+
+    <script src="../scripts/taskDetailScript.js"></script>
+
+</body>
+
+</html>

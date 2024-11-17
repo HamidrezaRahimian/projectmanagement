@@ -1,0 +1,62 @@
+<!--
+Diese HTML-Datei stellt ein Dashboard für das Projektmanagement dar. 
+Es enthält einen Header mit dem Titel, eine Navigationsleiste für die Projekte, 
+und eine Tabelle, in der Projektdetails angezeigt werden. 
+Der Footer gibt das Jahr und Copyright-Informationen an, während ein externes JavaScript-Skript die Funktionalität der Seite unterstützt.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard111</title>
+    <link rel="icon" href="styles/favicon.ico">
+    <link href="styles/projectboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>Project Management Dashboard</h1>
+    </header>
+
+    <!-- Navigationsleiste-->
+    <nav>
+        <ul>
+            <li><a href="#" id="overview-link">Projects Overview</a></li>
+            <li><button id="logout-button">Logout</button></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <!-- Hauptprojekttabelle-->
+    <table id="project-table">
+        <thead>
+            <tr>
+                <th>Projektname</th>
+                <th>Projekt Details</th>
+                <th>Project Progress</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody id="project-body">
+            <!-- Hier werden die Zeilen hinzugefügt -->
+        </tbody>
+    </table>
+
+
+    <footer id="footer">
+        <p>&copy; 2024 Project Management Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/projectDashboardUser.js"></script>
+
+</body>
+
+</html>
